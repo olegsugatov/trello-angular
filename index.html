@@ -4,26 +4,33 @@
 	<meta charset="UTF-8">
 	<title>Trello Task Manager Analog</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/trello.css">
 	<link rel="stylesheet" href="css/foundation.min.css">
+	<link rel="stylesheet" href="css/trello.css">
 </head>
 <body ng-cloak>
-	<header>
-		<div class="row">
-			<h1 class='app-name left'>Trello</h1>
-		</div>
-	</header>
-	
-	<section id="lists-container"
-			 class="lists-container"
-			 ng-controller="listsCtrl as listsCtrl">
-		<div class="row">
-			<section class="list list-inline"
-					 ng-repeat="list in listsCtrl.lists">
-				<h1>{{list.listName}}</h1>				
-			</section>
-		</div>	 
-	</section>
+  <header>
+    <div class="grid-container">
+    	<div class="large-6 columns">
+      		<h1 class="app-name left">Trello</h1>
+      	</div>
+    </div>
+  </header>
+
+  <section id="lists-container"
+           class="lists-container"
+           ng-controller="listsCtrl as listsCtrl">
+
+    <div class="grid-container">
+      <section class="list list-inline"
+               ng-repeat="list in listsCtrl.lists">
+        <h1>{{list.listName}}</h1>
+
+      </section>
+
+    </div>
+
+
+  </section>
 
 
 
